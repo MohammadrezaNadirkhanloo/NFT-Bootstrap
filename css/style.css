@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color_background: #07101d;
+  --color_main: #ff3c00;
+}
 @font-face {
   font-family: Kalameh;
   src: url("../font/KalamehWeb-Black.woff") format("woff");
@@ -17,27 +26,15 @@
   font-weight: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-:root {
-  --color_background: #07101d;
-  --color_main: #ff3c00;
-}
-
 /* style Scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #07101d;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(to top, #7011ad, #bc0505, #fc630f);
   border-radius: 5px;
@@ -47,7 +44,6 @@
   -o-border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ff3c00e8;
 }
@@ -63,8 +59,13 @@ a:not(.active, .title) {
     font-weight: bold;
   }
 }
+
 .text_color {
   color: var(--color_main) !important;
+}
+
+.font_size {
+  font-size: 38px !important;
 }
 
 .btn_orangered {
@@ -93,6 +94,12 @@ a:not(.active, .title) {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .font_size {
+    font-size: 64px !important;
   }
 }
 
@@ -174,6 +181,11 @@ input:focus {
   outline: none;
 }
 
+.form-control:focus {
+  border-color: var(--color_main) !important;
+  box-shadow: none;
+}
+
 .bg_gradient_btn {
   background-image: linear-gradient(to right, #7011ad, #bc0505, #fc630f);
   &:hover {
@@ -189,14 +201,5 @@ input:focus {
   );
   &:hover {
     box-shadow: 2px 2px 2px rgba(186, 75, 50, 0.767);
-  }
-}
-.font_size {
-  font-size: 38px !important;
-}
-
-@media screen and (min-width: 768px) {
-  .font_size {
-    font-size: 64px !important;
   }
 }
